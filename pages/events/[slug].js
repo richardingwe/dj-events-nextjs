@@ -1,9 +1,11 @@
-const [slug] = () => {
-    return (
-        <div>
+import Layout from '@/components/Layout';
 
-        </div>
+const slug = () => {
+    return (
+        <Layout>
+            <h1>Events</h1>
+        </Layout>
     );
 };
 
-export default [slug];
+export default slug;
