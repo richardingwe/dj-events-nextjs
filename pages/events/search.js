@@ -21,7 +21,7 @@ const SearchPage = ({ events }) => {
 };
 export default SearchPage;
 
-export async function getStaticProps({ query: { term } }) {
+export async function getServerSideProps({ query: { term } }) {
 
     const query = qs.stringify({
         _where: {
@@ -33,11 +33,12 @@ export async function getStaticProps({ query: { term } }) {
             ]
         }
     });
+
+
     const res = await fetch(`${API_URL}/events?${query}`);
     const events = await res.json();
 
     return {
         props: { events },
-        revalidate: 1,
     };
 }
