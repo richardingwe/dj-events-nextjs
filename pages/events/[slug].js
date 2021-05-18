@@ -35,7 +35,7 @@ const EventPage = ({ evt }) => {
                 <h3>Venue: {evt.venue}</h3>
                 <p>{evt.address}</p>
 
-                <EventMap evt={evt} />
+                {/* <EventMap evt={evt} /> */}
 
                 <Link href='/events'>
                     <a className={styles.back}>
